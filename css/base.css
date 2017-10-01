@@ -1,0 +1,70 @@
+/* Contenido responsivo */
+
+@media(min-width: 650px){
+	label{
+		display:inline-block;
+		min-width: 280px;
+	}
+
+	em{
+		display:inline-block;
+		clear:both;
+	}
+
+	fieldset label{
+		min-width: inherit;
+	}
+
+	fieldset input{
+		float: none;
+	}
+	input{
+		float: right;
+	}
+
+
+	label[for="tramite"] select{
+		width:500px;
+	}
+}
+
+
+
+@media(max-width: 649px){
+	form *{
+		display: block
+	}
+
+	strong{
+		display: inline-block;
+	}
+
+	br{
+		display:none;
+	}
+
+	button{
+		display:inline-block;
+	}
+
+	fieldset *{
+		display:inline-block;
+	}
+}
+
+
+@media(max-width: 310px){
+	label[for="razonsocial"] input{
+		max-width: 170px;
+	}
+}
+
+@media(min-width: 240px){
+	label[for="sigla"] select{
+		width: 200px;
+	}
+
+	select{
+		min-width:180px;
+	}
+}

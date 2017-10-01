@@ -1,0 +1,62 @@
+
+
+
+label span{
+	font-weight: bold;
+	font-family: sans-serif;
+	margin:5px;
+}
+
+
+h2{
+	font-family: sans-serif;
+}
+
+em{
+	color:red;
+}
+
+fieldset{
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-left: 0;
+	border-style: none;
+}
+
+
+
+
+
+input:invalid{
+	border-color:red;
+	background-color: lightyellow;
+}
+
+input:valid~em{
+	display: none;
+}
+
+
+input:valid~br{
+	display: none;
+}
+
+select:invalid{
+	border-color:red;
+	background-color: lightyellow;
+}
+
+select:valid~em{
+	display: none;
+}
+
+
+select:valid~br{
+	display: none;
+}
+
+
+button{
+	margin: 5px;
+}
+

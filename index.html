@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formularios</title>
+	<link rel="stylesheet" type="text/css" href="css/general.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/decoration.css">
+</head>
+<body>
+
+
+	<form action="http://www.w3schools.com/action_page.php">
+		<section>
+			<h2>Obligado al pago</h2>
+			<label for="nif">
+				<span>N.I.F:
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<input type="text" id="nif" maxlength="9" pattern="^\d{8}[A-Z]$" size="9" required/>
+				<br/><em>8 dígitos y una letra máyúscula.</em>
+			</label>
+			<label for="razonsocial">
+				<span>Apellidos y Nombre o Razón Social
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<input type="text" id="razonsocial" maxlength="40" size="35" required/>
+				<br/><em>No puede ocupar más de 50 caracteres y no puede estar vacío.</em>
+			</label>
+			<label for="sigla">
+				<span>Sigla
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<select id="sigla" required length="40">
+					<option value="" selected disabled>Seleccione sigla</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<br/><em>Debe elegir una opción</em>
+			</label>
+			<label for="viapublica">
+				<span>Nombre vía pública
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<input type="text" id="viapublica" maxlength="40" required/>
+				<br/><em>No puede ocupar más de 40 caracteres y no puede estar vacío.</em>
+			</label>
+			<label for="numero">
+				<span>Número
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<input type="text" id="numero" maxlength="3" pattern="^\d+$" required/>
+				<br/><em>Un número hasta tres cifras</em>
+			</label>
+			<label for="escalera">
+				<span>Escalera</span>
+				<input type="text" id="escalera" maxlength="2" pattern="^\d+$"/>
+				<br/><em>Un número hasta dos cifras</em>
+			</label>
+			<label for="piso">
+				<span>Piso</span>
+				<input type="text" id="piso" maxlength="3" pattern="^\d+$"/>
+				<br/><em>Un número hasta tres cifras</em>
+			</label>
+			<label for="puerta">
+				<span>Puerta</span>
+				<input type="text" id="puerta" maxlength="3" pattern="^\d+$"/>
+				<br/><em>Un número hasta tres cifras</em>
+			</label>
+			<label for="telefono">
+				<span>Teléfono</span>
+				<input type="text" id="telefono" maxlength="9" pattern="^\d{9}$"/>
+				<br/><em>Un número de nueve cifras</em>
+			</label>
+			<label for="fax">
+				<span>Fax</span>
+				<input type="text" id="fax" maxlength="9" pattern="^\d{9}$"/>
+				<br/><em>Un número de nueve cifras</em>
+			</label>			
+			<label for="provincia">
+				<span>Provincia
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<select id="provincia" required>
+					<option value="" selected disabled>Seleccione provincia</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<br/><em>Debe elegir una opción</em>
+			</label>
+
+			<label for="municipio">
+				<span>Municipio
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<select id="provincia" required>
+					<option value="" selected disabled>Seleccione provincia</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<br/><em>Debe elegir una opción</em>
+			</label>
+			<label for="codpostal">
+				<span>Cód. Postal
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<input type="text" id="codpostal" maxlength="5" pattern="^\d{5}$" required/>
+				<br/><em>Un código postal debe constar de 5 cifras.</em>
+			</label>
+		</section>	
+		<hr/>
+		<section>
+			<h2>Tasas</h2>
+
+			<label for="tramite">
+				<span>Trámite
+					<strong><abbr title="Obligatorio">(*)</abbr></strong>
+				</span>
+				<br/>
+				<select id="tramite" required>
+					<option value="" selected disabled>Seleccione trámite</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<br/><em>Debe elegir una opción</em>
+			</label>
+			<br/>
+
+			<label for="expediente">
+				<span>Número de Expediente</span>
+				<input type="text" id="expediente" pattern="^\d+$" maxlength="20"/>
+				<br/><em>Un número de hasta 20 cifras.</em>
+			</label>
+			<label for="liquidacion">
+				<span>Número de Liquidacion</span>
+				<input type="text" id="liquidacion" pattern="^\d+$" maxlength="20"/>
+				<br/><em>Un número de hasta 20 cifras.</em>
+			</label>
+
+			<fieldset><!-- checkboxes -->
+				<label for="efectvo">
+					<input type="radio" name="formapago" id="efectivo" checked required/>
+					<span>En Efectivo</span>
+				</label>
+				<label for="adeudo">
+					<input type="radio" name="formapago" id="deudo" required/>
+					<span>Adeudo en cta.</span>
+				</label>
+				<label for="telematico">
+					<input type="radio" name="formapago" id="telematico" required/>
+					<span>Pago telemático</span>
+				</label>
+			</fieldset>
+
+
+			<label for="concepto">
+				<span>Concepto</span>
+				<input type="text" id="concepto" pattern="^\d+(.\d{2})?€$" maxlength="20"/>
+				<br/><em>X€ o X.YY€ Ej: 3.12€ o 3€</em>
+			</label>
+
+			<!-- botones -->
+			<br/>
+			<button type="submit">Continuar</button>
+			<button type="button" href="http://www.google.es">Volver</button>
+			<button type="reset">Limpiar Formulario</button>
+		</section>
+	</form>
+</body>
+</html>
